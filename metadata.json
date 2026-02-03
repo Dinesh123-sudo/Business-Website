@@ -1,0 +1,8 @@
+{
+  "name": "WorldClass - Sri Meenachi Textiles",
+  "description": "A premium international textiles agency website with a full admin dashboard and CMS functionality.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
