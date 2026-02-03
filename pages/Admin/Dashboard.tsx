@@ -15,6 +15,13 @@ const Dashboard: React.FC = () => {
     { name: 'May', visits: 1400 },
   ];
 
+  const stats = [
+    { label: 'Total Inquiries', value: inquiries.length, Icon: MessageSquare, color: 'text-blue-600', bg: 'bg-blue-50' },
+    { label: 'Blog Posts', value: posts.length, Icon: Users, color: 'text-purple-600', bg: 'bg-purple-50' },
+    { label: 'Page Views', value: '1,284', Icon: Eye, color: 'text-rose-600', bg: 'bg-rose-50' },
+    { label: 'Engagement', value: '+12%', Icon: TrendingUp, color: 'text-green-600', bg: 'bg-green-50' },
+  ];
+
   return (
     <div className="animate-in fade-in duration-500">
       <header className="mb-10">
@@ -24,15 +31,10 @@ const Dashboard: React.FC = () => {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-        {[
-          { label: 'Total Inquiries', value: inquiries.length, icon: MessageSquare, color: 'text-blue-600', bg: 'bg-blue-50' },
-          { label: 'Blog Posts', value: posts.length, icon: Users, color: 'text-purple-600', bg: 'bg-purple-50' },
-          { label: 'Page Views', value: '1,284', icon: Eye, color: 'text-rose-600', bg: 'bg-rose-50' },
-          { label: 'Engagement', value: '+12%', icon: TrendingUp, color: 'text-green-600', bg: 'bg-green-50' },
-        ].map((stat, i) => (
+        {stats.map((stat, i) => (
           <div key={i} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
             <div className={`w-12 h-12 ${stat.bg} ${stat.color} rounded-2xl flex items-center justify-center mb-4`}>
-              <stat.icon size={24} />
+              <stat.Icon size={24} />
             </div>
             <p className="text-slate-500 text-sm font-medium">{stat.label}</p>
             <h4 className="text-3xl font-bold text-slate-800 mt-1">{stat.value}</h4>

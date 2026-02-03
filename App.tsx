@@ -1,6 +1,4 @@
-
 import React from 'react';
-// Import as namespace to bypass potential named export resolution issues
 import * as ReactRouterDOM from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import Layout from './components/Layout';
